@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <OpsWay_RUM>
+            <active>true</active>
+            <codePool>community</codePool>
+        </OpsWay_RUM>
+    </modules>
+</config>

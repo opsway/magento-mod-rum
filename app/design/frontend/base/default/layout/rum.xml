@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addJs"><script>boomerang/boomerang.min.js</script></action>
+        </reference>
+        <reference name="after_body_start">
+            <block type="rum/boomerang" after="google_analytics" name="boomerang" as="boomerang" template="rum/boomerang.phtml"/>
+        </reference>
+    </default>
+</layout>

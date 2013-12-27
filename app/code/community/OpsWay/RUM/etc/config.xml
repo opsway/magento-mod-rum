@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+        <config>
+            <modules>
+                <OpsWay_RUM>
+                    <version>0.1.0</version>
+                </OpsWay_RUM>
+                <depends>
+                    <Mage_GoogleAnalytic />
+                </depends>
+            </modules>
+            <global>
+                <blocks>
+                    <rum>
+                        <class>OpsWay_RUM_Block</class>
+                    </rum>
+                </blocks>
+            </global>
+            <frontend>
+                <layout>
+                    <updates>
+                        <rum>
+                            <file>rum.xml</file>
+                        </rum>
+                    </updates>
+                </layout>
+            </frontend>
+        </config>

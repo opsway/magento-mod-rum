@@ -1,0 +1,26 @@
+<?php if (Mage::getStoreConfigFlag('google/analytics/active')): ?>
+<script type="text/javascript">		
+    if (Mage.Cookies.get("BA") === null) {
+        var testBandwidth = (Math.floor((Math.random() * 100)) % 1 == 0);         
+    } 
+    BOOMR.init({
+        beacon_url: null,
+	  BW: {
+        base_url: "/skin/frontend/base/default/images/boomerang/",
+        enabled: testBandwidth,
+        site_domain: '<?php echo Mage::getStoreConfig("web/cookie/cookie_domain"); ?>'
+      }
+    });
+    BOOMR.subscribe('before_beacon', function(o){
+        bwLatResult = formatBwLatency(testBandwidth, o);
+       	_gaq.push(['_setCustomVar', 1, 'Bandwidth', bwLatResult.bandwidth, 1]);
+       	_gaq.push(['_setCustomVar', 2, 'Latency', bwLatResult.latency, 1]);        	
+
+        if (o.t_done) {
+            _gaq.push(['_trackTiming', '<?php echo $this->getPageType(); ?>' ,'Pageview', o.t_done ]);         
+        }
+        _gaq.push(['_trackEvent', '<?php echo $this->getPageType(); ?>', 'Pageview']);
+    });
+
+</script>
+<?php endif ?>
