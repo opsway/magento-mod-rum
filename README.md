@@ -1,7 +1,7 @@
 Magento module for site performance real-user monitoring (RUM) using GoogleAnalytics
 ==========
 
-Module is based on [boomerang.js library] [1] and it is inspired by [great presentation done by Philip Tellis] [2]
+Module is based on [boomerang.js library](https://github.com/lognormal/boomerang/) and it is inspired by [great presentation done by Philip Tellis](http://www.slideshare.net/bluesmoon/boomerang-how-fast-do-users-think-your-site-is)
 
 How does it work?
 -----------
@@ -52,6 +52,3 @@ TODO
 
 1. Specify %% of users to measure bandwidth & latency via Magento backoffice
 2. Make getPageType() extensible through extending the class
-
-[1] https://github.com/lognormal/boomerang/
-[2] http://www.slideshare.net/bluesmoon/boomerang-how-fast-do-users-think-your-site-is
