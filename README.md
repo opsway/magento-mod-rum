@@ -35,6 +35,7 @@ Usage
 -----------
 
 1. Install to Magento by copying to directory structure
+2. Enable GoogleAnalytics in Magento: System->Congirugration->Google API->Google Analytics->
 2. You can specify site domain in System->Configuration->Web->Cookie domain 
 Boomerang.js will save calculated bandwidth/latency for a user in cookie, using this cookie domain.
 This option is needed if you plan to use module when you have multiple sub-domains
