@@ -4,9 +4,10 @@ class OpsWay_RUM_Block_Boomerang extends Mage_Core_Block_Template
 {
     public function getPageType()
     {
-        $handles = $this->getLayout()->getUpdate()->getHandles();
+        $handles = $this->getLayout()->getUpdate()->getHandles();\
+        # Home page can be found also by  stristr(Mage::getSingleton('cms/page')->getIdentifier(),"home")
         if (in_array("cms_page", $handles) 
-        	&& stristr(Mage::getSingleton('cms/page')->getIdentifier(),"home")) {
+        	&& Mage::getSingleton('cms/page')->getIdentifier() == "home") {
         	$pagetype = "Home page";
         } elseif (in_array("catalog_product_view", $handles)) {
         	$pagetype = "Product page";

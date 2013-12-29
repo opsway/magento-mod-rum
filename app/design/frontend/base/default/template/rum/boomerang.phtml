@@ -1,7 +1,7 @@
 <?php if (Mage::getStoreConfigFlag('google/analytics/active')): ?>
 <script type="text/javascript">		
     if (Mage.Cookies.get("BA") === null) {
-        var testBandwidth = (Math.floor((Math.random() * 100)) % 1 == 0);         
+        var testBandwidth = (Math.floor((Math.random() * 100)) % 33 == 0);         
     } 
     BOOMR.init({
         beacon_url: null,
@@ -16,6 +16,7 @@
        	_gaq.push(['_setCustomVar', 1, 'Bandwidth', bwLatResult.bandwidth, 1]);
        	_gaq.push(['_setCustomVar', 2, 'Latency', bwLatResult.latency, 1]);        	
 
+        _gaq.push(['_setSiteSpeedSampleRate', 100]);
         if (o.t_done) {
             _gaq.push(['_trackTiming', '<?php echo $this->getPageType(); ?>' ,'Pageview', o.t_done ]);         
         }
