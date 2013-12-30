@@ -13,11 +13,12 @@
     });
     BOOMR.subscribe('before_beacon', function(o){
         bwLatResult = formatBwLatency(testBandwidth, o);
-       	_gaq.push(['_setCustomVar', 1, 'Bandwidth', bwLatResult.bandwidth, 1]);
-       	_gaq.push(['_setCustomVar', 2, 'Latency', bwLatResult.latency, 1]);        	
+       	_gaq.push(['_setCustomVar', 4, 'Bandwidth', bwLatResult.bandwidth, 1]);
+       	_gaq.push(['_setCustomVar', 5, 'Latency', bwLatResult.latency, 1]);        	
 
         _gaq.push(['_setSiteSpeedSampleRate', 100]);
-        if (o.t_done) {
+        //Filtering out noise
+        if (o.t_done && o.t_done <=60000) {
             _gaq.push(['_trackTiming', '<?php echo $this->getPageType(); ?>' ,'Pageview', o.t_done ]);         
         }
         _gaq.push(['_trackEvent', '<?php echo $this->getPageType(); ?>', 'Pageview']);

@@ -53,3 +53,5 @@ TODO
 
 1. Specify %% of users to measure bandwidth & latency via Magento backoffice
 2. Make getPageType() extensible through extending the class
+3. Specify CustomVar keys (hardcoded to 4 and 5) through Admin
+4. Specify page load noise treshold (set to 60s) through Admin
