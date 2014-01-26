@@ -21,7 +21,7 @@
         if (o.t_done && o.t_done <=60000) {
             _gaq.push(['_trackTiming', '<?php echo $this->getPageType(); ?>' ,'Pageview', o.t_done ]);         
         }
-        _gaq.push(['_trackEvent', '<?php echo $this->getPageType(); ?>', 'Pageview', 0, true]);
+        _gaq.push(['_trackEvent', '<?php echo $this->getPageType(); ?>', 'Pageview', '-', 0, true]);
     });
 
 </script>
