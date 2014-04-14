@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <opsway translate="label" module="rum">
+            <label>OpsWay</label>
+            <sort_order>100</sort_order>
+        </opsway>
+    </tabs>
+    <sections>
+        <rum translate="label" module="rum">
+            <label>RUM</label>
+            <tab>opsway</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>980</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+                <rum_group>
+                    <label>Separate GA account</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <rum_input translate="GA account to use for RUM">    
+                            <label>GA account to use for RUM</label>
+                            <comment>delete data from field, to stop using separate account</comment>    
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </rum_input>
+                    </fields>
+                </rum_group>
+            </groups>
+        </rum>
+    </sections>
+</config>

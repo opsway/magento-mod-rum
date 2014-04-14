@@ -6,6 +6,7 @@ class OpsWay_RUM_Block_Boomerang extends Mage_Core_Block_Template
 
     public function getPageType()
     {
+
         if (!$this->pagetype) {
             $handles = $this->getLayout()->getUpdate()->getHandles();
             if (in_array("cms_page", $handles) 
